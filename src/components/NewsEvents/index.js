@@ -1,14 +1,13 @@
 /*=============================================================================
-File: App.css
+File: index.js for NewsEvents
 -------------------------------------------------------------------------------
-Description: styling for website 
+Description: Parent component 
 =============================================================================*/
-/*--------------- Basic Theme --------------------------------------------*/
-.App {
-  text-align: center;
-}
-body {
-  background-color: rgb(253, 236, 140);
+import React from 'react';
+
+function NewsEvents() {
+
+    return <h1>News & Events: </h1>
 }
 
-
+export default NewsEvents;

@@ -1,0 +1,63 @@
+/*=============================================================================
+File: Navbar.module.css
+-------------------------------------------------------------------------------
+Description: styling for navigation bar
+=============================================================================*/
+/*--------------- Navigation Bar --------------------------------------------*/
+.nav {
+    background-color: #ecb43b;
+    color: #865c00;
+    font-weight: bolder;
+  }
+  .navLogo {
+    color: #865c00;
+    float: left;
+    padding: 0;
+    margin-left: -2rem;
+    margin-right: 3rem;   
+  }
+  .navLink {
+    background-color: inherit;
+    color: inherit;
+    padding-left: 3rem;
+    transition: color 0.3s, background-color 0.3s;
+    text-decoration: none;
+    border-radius: 10px 100px / 120px;
+    margin-left: 10px;
+  }
+  .navLink:hover {
+    background-color: #f7c761;
+    color: #362e1c;
+    }
+  .navDropdown {
+    background-color: inherit; 
+    color: inherit; 
+    border-radius: 10px 100px / 120px;
+    display: flex;
+    margin-left: 2rem;
+    margin-right: -2rem;
+  }
+  .navDropdown:hover {
+    background-color: #f7c761;
+  }
+  .dropdownItems {
+    background-color: inherit; 
+    color: inherit; 
+    border-radius: 10px 100px / 120px;
+    display: flex;
+    padding: 5px;
+    margin: 0;
+  }
+  .dropdownItems:hover {
+    background-color: #f7c761;
+  }
+  /*--------------- end of Navigation Bar -----------------------------------*/
+  
+  
+  .navDropdown:hover{
+    background-color: #e0c17f;
+  }
+  
+  .createAccountLink {
+    margin-left: auto;
+  }

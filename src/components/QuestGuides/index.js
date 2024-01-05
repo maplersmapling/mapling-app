@@ -1,14 +1,13 @@
 /*=============================================================================
-File: App.css
+File: index.js for QuestGuides
 -------------------------------------------------------------------------------
-Description: styling for website 
+Description: Parent component 
 =============================================================================*/
-/*--------------- Basic Theme --------------------------------------------*/
-.App {
-  text-align: center;
-}
-body {
-  background-color: rgb(253, 236, 140);
+import React from 'react';
+
+function QuestGuides() {
+
+    return <h1>Quest Guides: </h1>
 }
 
-
+export default QuestGuides;

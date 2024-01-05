@@ -1,14 +1,13 @@
 /*=============================================================================
-File: App.css
+File: index.js for Equipment
 -------------------------------------------------------------------------------
-Description: styling for website 
+Description: Parent component 
 =============================================================================*/
-/*--------------- Basic Theme --------------------------------------------*/
-.App {
-  text-align: center;
-}
-body {
-  background-color: rgb(253, 236, 140);
+import React from 'react';
+
+function Equipment() {
+
+    return <h1>Equipment:</h1>
 }
 
-
+export default Equipment;

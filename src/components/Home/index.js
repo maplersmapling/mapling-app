@@ -1,14 +1,13 @@
 /*=============================================================================
-File: App.css
+File: index.js for Home
 -------------------------------------------------------------------------------
-Description: styling for website 
+Description: Parent component 
 =============================================================================*/
-/*--------------- Basic Theme --------------------------------------------*/
-.App {
-  text-align: center;
-}
-body {
-  background-color: rgb(253, 236, 140);
+import React from 'react';
+
+function Home() {
+
+    return <h1>Home: </h1>
 }
 
-
+export default Home;
