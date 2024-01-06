@@ -1,0 +1,11 @@
+/*=============================================================================
+File: components.module.css
+-------------------------------------------------------------------------------
+Description: styling for components 
+delare at top with: import styles from './components.module.css'
+in code: className={styles.style_name}   
+=============================================================================*/
+.basicTheme {
+    color: #865c00;
+    font-family: 'Playpen Sans'; 
+}

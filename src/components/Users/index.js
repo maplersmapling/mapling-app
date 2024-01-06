@@ -12,8 +12,8 @@ import UserList from './UserList';
 // this array is temporary, just for testing if components are working correctly
 // look on the TodoList-ex google doc in the MaplingWebsiteInfo to see how everything works
 const initialState = [
-    {id: 1, username: "winditupp", email: "mya@mail.com", password: "ilovechris"},
-    {id: 2, username: "SuckMaBow", email: "chris@mail.com", password: "ilovemya"},
+    {id: 1, username: 'winditupp', email: 'mya@mail.com', password: 'ilovechris'},
+    {id: 2, username: 'SuckMaBow', email: 'chris@mail.com', password: 'ilovemya'},
 ]
 
 function Users() {
