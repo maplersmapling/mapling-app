@@ -3,12 +3,10 @@ File: index.js for Trackers
 -------------------------------------------------------------------------------
 Description: Parent component 
 =============================================================================*/
-import React from 'react';
-import { useState } from 'react'; 
-import { Nav, Tab, Row , Tabs, Container, Col, Card} from 'react-bootstrap';
-import CharNav from './CharacterNav';
-import CharTab from './CharacterTab';
-import TrackerForm from './TrackerForm';
+import React from 'react'; 
+import { Nav, Tab, Row } from 'react-bootstrap';
+import NavChar from './NavCharacter';
+import TabChar from './TabCharacter';
 
 import {charNames} from './testData';
 import styles from '../components.module.css';
@@ -23,33 +21,12 @@ export default function Trackers() {
                 defaultActiveKey="char1"
             >
                 <Row>
-                    <Nav variant="tabs">
-                        <Nav.Item>
-                            <Nav.Link eventKey='char1' >
-                                Character 1
-                            </Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="char2">
-                                Character 2
-                            </Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="char3">
-                                Character 3
-                            </Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="char4">
-                                Character 4
-                            </Nav.Link>
-                        </Nav.Item>
-                    </Nav>
+                    <NavChar />
                 </Row>
                 <Tab.Content>
                     <Tab.Pane eventKey="char1">
                         *char 1 content*  
-                        <CharTab />                   
+                        <TabChar />                   
                     </Tab.Pane>
                     <Tab.Pane eventKey="char2">
                         *char 2 content*

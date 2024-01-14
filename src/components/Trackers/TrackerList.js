@@ -6,13 +6,22 @@ Description: returns rendered tracker item
 import React from 'react';
 import Tracker from './Tracker';
 
-export default function TrackerList({ items }) {
+export default function TrackerList({ 
+    tasks, 
+    onChangeTask 
+}) {
 
     return (
-        <div>
-            {items.map(item => {
-                return <Tracker key={item.id} item={item} />
+        <ul>
+            {tasks.map(task => {
+                return (
+                    <Tracker 
+                        key={task.id}
+                        task={task}
+                        onChange={onChangeTask}
+                    />
+                );
             })}
-        </div> 
+        </ul>
     );
 }

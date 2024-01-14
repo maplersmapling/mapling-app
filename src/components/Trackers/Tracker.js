@@ -4,11 +4,31 @@ File: Tracker.js
 Description: renders item from list 
 =============================================================================*/
 import React from 'react';
-import { useState } from 'react'; 
 
-export default function Tracker({ item }) {
+export default function Tracker({ 
+    task,
+    onChange
+}) {
 
-    /*
+    return (
+        <li>
+        <label>
+            <input 
+                type="checkbox"
+                checked={task.done}
+                onChange={e => {
+                    onChange({
+                        ...task,
+                        done: e.target.checked
+                    });
+                }}
+            />
+            {task.title}
+        </label>
+        </li>
+    );
+}
+/*
     const [isEditing, setIsEditing] = useState(false);
     const [updatedItem, setUpdatedItem] = useState();
 
@@ -28,25 +48,23 @@ export default function Tracker({ item }) {
         // call updateHandler with input
         updateHandler(input)
         setIsEditing(false)
-    }*/
-    return (
-        <div>
+
+     <div>
             {item.name}
-            {/* isEditing ?
+isEditing ?
              <form >
                 <input 
                     type="text"
                     defaultValue={item.name}
                     
                 />
-             </form> //onSubmit={e => updateAndReset(updatedItem, e)} onChange={updateItemState}
+             </form> onSubmit={e => updateAndReset(updatedItem, e)} onChange={updateItemState}
              :
              <p onDoubleClick={() => setIsEditing(true)}>
                 item.name
-             </p> //double click activates editing*/}    
-            {/* Button for user to delete item from list 
-            <button onClick={() => deleteHandler(item.id)}>X</button>*/}
-            
-        </div>
-    )
-}
+             </p> double click activates editing  
+             Button for user to delete item from list 
+            <button onClick={() => deleteHandler(item.id)}>X</button>
+        
+            </div>
+    }*/
