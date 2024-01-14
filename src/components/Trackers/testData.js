@@ -9,29 +9,35 @@ Includes data for: charTabNames, dailyTasks, dailyBosses, weeklyTasks,
 /*-----------------
 values setup: 
  {
-   id: ,
-   type: '', 
-   name: ''
+   id: '',
+   category: '',
+   title: '', 
+   done: ''
 },
 -----------------*/
 //-------------- charTabNames -------------------------------------------
 export const charNames = [
     {
         id: 1,
-        type: 'default',
-        name: 'character 2'
+        category: 'character',
+        title: 'character 1',
+        isActive: true
+
     }, {
         id: 2,
-        type: 'default',
-        name: 'character 2'
+        category: 'character',
+        title: 'character 2',
+        isActive: false
     }, {
         id: 3,
-        type: 'default',
-        name: 'character 3'
+        category: 'character',
+        title: 'character 3',
+        isActive: false
     }, {
         id: 4,
-        type: 'default',
-        name: 'character 4'
+        category: 'character',
+        title: 'character 4',
+        isActive: false
     }
 ]
 //-------------- dailyTasks -------------------------------------------
@@ -39,339 +45,432 @@ export const charNames = [
 export const dailyTasks = [
     {  
         id: 1, 
-        type: 'Task', 
-        name: 'Guild Check-in'
+        category: 'task',
+        title: 'Guild Check-in',
+        done: false
     }, {
         id: 2, 
-        type: 'Task', 
-        name: 'MPE'
-    }, {
+        category: 'task',
+        title: 'MPE',
+        done: false
+    },{
         id: 3, 
-        type: 'Arcane River', 
-        name: 'Vanishing Journey'
+        category: 'arcane',
+        title: 'Vanishing Journey',
+        done: false
     }, {
         id: 4, 
-        type: 'Arcane River', 
-        name: 'Chu Chu'
+        category: 'arcane',
+        title: 'Chu Chu',
+        done: false
     }, {
         id: 5, 
-        type: 'Arcane River', 
-        name: 'Lachelein'
+        category: 'arcane',
+        title: 'Lachelein',
+        done: false
     }, {
-        id: 6, 
-        type: 'Arcane River', 
-        task: 'Arcana'
+        id: 6,  
+        category: 'arcane',
+        title: 'Arcana',
+        done: false
     }, {
         id: 7, 
-        type: 'Arcane River', 
-        name: 'Morass'
+        category: 'arcane',
+        title: 'Morass',
+        done: false
     }, {
         id: 8, 
-        type: 'Arcane River', 
-        name: 'Esfera'
+        category: 'arcane',
+        title: 'Esfera',
+        done: false
     }, {
         id: 9, 
-        type: 'Arcane River', 
-        name: 'Tenebris Research'
+        category: 'arcane',
+        title: 'Tenebris Research',
+        done: false
     }, {
         id: 10, 
-        type: 'Grandis', 
-        name: 'Erda\'s Request'
+        category: 'grandis',
+        title: 'Erda\'s Request',
+        done: false
     }, {
         id: 11, 
-        type: 'Grandis', 
-        name: 'Cernium'
+        category: 'grandis',
+        title: 'Cernium',
+        done: false
     }, {
         id: 12, 
-        type: 'Grandis', 
-        name: 'Arcus'
+        category: 'grandis',
+        title: 'Arcus',
+        done: false
     }, {
         id: 13, 
-        type: 'Grandis', 
-        name: 'Odium'
+        category: 'grandis',
+        title: 'Odium',
+        done: false
     }, {
         id: 14, 
-        type: 'Grandis', 
-        name: 'Shangri-La'
+        category: 'grandis',
+        title: 'Shangri-La',
+        done: false
     }, {
         id: 15, 
-        type: 'Grandis', 
-        name: 'Arteria'
+        category: 'grandis',
+        title: 'Arteria',
+        done: false
+    }, {
+        id: 16,
+        category: 'grandis',
+        title: 'Carcion',
+        done: false
     }
 ];
 //-------------- dailyBosses -------------------------------------------
 export const dailyBosses = [
     {
         id: 1,  
-        type: 'Easy, Normal',
-        name: 'Zakum'
+        category: ['easy', 'normal'],
+        title: 'Zakum',
+        done: false
     }, { 
         id: 2,  
-        type: 'Easy, Normal',
-        name: 'Magnus'
+        category: ['easy', 'normal'],
+        title: 'Magnus',
+        done: false
     }, {
         id: 3,  
-        type: 'Normal',
-        name: 'Hilla'
+        category: ['normal'],
+        title: 'Hilla',
+        done: false
     }, {
         id: 4,  
-        type: 'Normal',
-        name: 'OMNI-CLN'
+        category: ['normal'],
+        title: 'OMNI-CLN',
+        done: false
     }, {
         id: 5,  
-        type: 'Easy, Normal',
-        name: 'Papulatus'
+        category: ['easy', 'normal'],
+        title: 'Papulatus',
+        done: false
     }, {
         id: 6,  
-        type: 'Normal',
-        name: 'Crimson Queen'
+        category: ['normal'],
+        title: 'Crimson Queen',
+        done: false
     }, {
         id: 7,  
-        type: 'Normal',
-        name: 'Pierre'
+        category: ['normal'],
+        title: 'Pierre',
+        done: false
     }, {
         id: 8,  
-        type: 'Normal',
-        name: 'Von Bon'
+        category: ['normal'],
+        title: 'Von Bon',
+        done: false
     }, {
         id: 9,  
-        type: 'Normal',
-        name: 'Vellum'
+        category: ['normal'],
+        title: 'Vellum',
+        done: false
     }, {
         id: 10,  
-        type: 'Easy, Normal, Hard',
-        name: 'Von Leon'
+        category: ['easy', 'normal', 'hard'],
+        title: 'Von Leon',
+        done: false
     }, {
         id: 11,  
-        type: 'Easy, Normal, Chaos',
-        name: 'Horntail'
+        category: ['easy', 'normal', 'chaos'],
+        title: 'Horntail',
+        done: false
     }, {
         id: 12,  
-        type: 'Easy, Normal',
-        name: 'Arkarium'
+        category: ['normal'],
+        title: 'Arkarium',
+        done: false
     }, {
         id: 13,  
-        type: 'Normal',
-        name: 'Pink Bean'
+        category: ['normal'],
+        title: 'Pink Bean',
+        done: false
     }, {
         id: 14,  
-        type: 'Normal',
-        name: 'Gollux'
+        category: ['normal'],
+        title: 'Gollux',
+        done: false
     }, {
         id: 15,  
-        type: 'Normal',
-        name: 'Ranmaru'
+        category: ['normal', 'hard'],
+        title: 'Ranmaru',
+        done: false
     }
 ];
 //-------------- weeklyTasks -------------------------------------------
 export const weeklyTasks = [
     {
         id: 1, 
-        type: 'Task',
-        name: 'Claim Guild Buff'
+        category: 'guild',
+        title: 'Claim Guild Buff',
+        done: false
     }, {
         id: 2, 
-        type: 'Task',
-        name: 'Dark World Tree'
+        category: 'task',
+        title: 'Dark World Tree',
+        done: false
     }, {
         id: 3, 
-        type: 'Task',
-        name: 'Mu Lung Dojo'
+        category: 'task',
+        title: 'Mu Lung Dojo',
+        done: false
     }, {
         id: 4, 
-        type: 'Task',
-        name: 'Flag Race'
+        category: 'guild',
+        title: 'Flag Race',
+        done: false
     }, {
         id: 5, 
-        type: 'Task',
-        name: 'Sharenian Culvert'
+        category: 'guild',
+        title: 'Sharenian Culvert',
+        done: false
     }, {
-        id: 6, 
-        type: 'Arcane River',
-        name: 'Erda Spectrum'
+        id: 6,
+        category: 'arcane', 
+        title: 'Erda Spectrum',
+        done: false
     }, {
         id: 7, 
-        type: 'Arcane River',
-        name: 'Hungry Muto'
+        category: 'arcane',
+        title: 'Hungry Muto',
+        done: false
     }, {
         id: 8, 
-        type: 'Arcane River',
-        name: 'Midnight Chaser'
+        category: 'arcane',
+        title: 'Midnight Chaser',
+        done: false
     }, {
         id: 9, 
-        type: 'Arcane River',
-        name: 'Spirit Savior'
+        category: 'arcane',
+        title: 'Spirit Savior',
+        done: false
     }, {
         id: 10, 
-        type: 'Arcane River',
-        name: 'Ranheim Defense'
+        category: 'arcane',
+        title: 'Ranheim Defense',
+        done: false
     }, {
         id: 11, 
-        type: 'Arcane River',
-        name: 'Esfera Guardian'
+        category: 'arcane',
+        title: 'Esfera Guardian',
+        done: false
     }
 ];
 //-------------- weeklyBosses -------------------------------------------
 export const weeklyBosses = [
     {
         id: 1, 
-        type: 'Chaos',
-        name: 'Zakum'
+        category: ['chaos'],
+        title: 'Zakum',
+        done: false
     }, {
         id: 2, 
-        type: 'Hard',
-        name: 'Magnus'
+        category: ['hard'],
+        title: 'Magnus',
+        done: false
     }, {
         id: 3, 
-        type: 'Hard',
-        name: 'Hilla'
+        category: ['hard'],
+        title: 'Hilla',
+        done: false
     }, {
         id: 4, 
-        type: 'Chaos',
-        name: 'Papulatus'
+        category: ['chaos'],
+        title: 'Papulatus',
+        done: false
     }, {
         id: 5, 
-        type: 'Chaos',
-        name: 'Crimson Queen'
+        category: ['chaos'],
+        title: 'Crimson Queen',
+        done: false
     }, {
         id: 6, 
-        type: 'Chaos',
-        name: 'Pierre'
+        category: ['chaos'],
+        title: 'Pierre',
+        done: false
     }, {
         id: 7, 
-        type: 'Chaos',
-        name: 'Von Bon'
+        category:['chaos'],
+        title: 'Von Bon',
+        done: false
     }, {
         id: 8, 
-        type: 'Chaos',
-        name: 'Vellum'
+        category: ['chaos'],
+        title: 'Vellum',
+        done: false
     }, {
         id: 9, 
-        type: 'Chaos',
-        name: 'Pink Bean'
+        category: ['chaos'],
+        title: 'Pink Bean',
+        done: false
     }, {
         id: 10, 
-        type: 'Easy, Normal',
-        name: 'Cygnus'
+        category: ['easy', 'normal'],
+        title: 'Cygnus',
+        done: false
     }, {
         id: 11, 
-        type: 'Normal, Hard',
-        name: 'Lotus'
+        category: ['normal', 'hard'],
+        title: 'Lotus',
+        done: false
     }, {
         id: 12, 
-        type: 'Normal, Hard',
-        name: 'Damien'
+        category: ['normal', 'hard'],
+        title: 'Damien',
+        done: false
     }, {
         id: 13, 
-        type: 'Normal, Chaos',
-        name: 'Guardian Angel Slime'
+        category: ['normal', 'chaos'],
+        title: 'Guardian Angel Slime',
+        done: false
     }, {
         id: 14, 
-        type: 'Easy, Normal, Hard',
-        name: 'Lucid'
+        category: ['easy', 'normal', 'hard'],
+        title: 'Lucid',
+        done: false
     }, {
         id: 15, 
-        type: 'Easy, Normal, Hard',
-        name: 'Will'
+        category: ['easy', 'normal', 'hard'],
+        title: 'Will',
+        done: false
     }, {
         id: 16, 
-        type: 'Normal, Chaos',
-        name: 'Gloom'
+        category: ['normal', 'chaos'],
+        title: 'Gloom',
+        done: false
     }, {
         id: 17, 
-        type: 'Normal, Hard',
-        name: 'Versus Hilla'
+        category: ['normal', 'hard'],
+        title: 'Versus Hilla',
+        done: false
     }, {
         id: 18, 
-        type: 'Normal, Hard',
-        name: 'Darknell'
+        category: ['normal', 'hard'],
+        title: 'Darknell',
+        done: false
     }, {
         id: 19, 
-        type: 'Hard, Extreme',
-        name: 'Black Mage'
+        category: ['hard', 'extreme'],
+        title: 'Black Mage',
+        done: false
     }, {
         id: 20, 
-        type: 'Normal, Hard, Extreme',
-        name: 'Chosen Seren'
+        category: ['normal', 'hard', 'extreme'],
+        title: 'Chosen Seren',
+        done: false
     }, {
         id: 21, 
-        type: 'Easy, Normal, Chaos, Extreme',
-        name: 'Kalos the Guardian'
+        category: ['easy', 'normal', 'chaos', 'extreme'],
+        title: 'Kalos the Guardian',
+        done: false
     }, {
         id: 22, 
-        type: 'Easy, Normal, Hard, Extreme',
-        name: 'Kaling'
+        category: ['easy', 'normal', 'hard', 'extreme'],
+        title: 'Kaling',
+        done: false
     }, {
         id: 23, 
-        type: 'Normal',
-        name: 'Princess No'
+        category: 'normal',
+        title: 'Princess No',
+        done: false
     }, {
         id: 24, 
-        type: 'Normal',
-        name: 'Akechi Mitsuhide'
+        category: 'normal',
+        title: 'Akechi Mitsuhide',
+        done: false
     }
 ];
 //-------------- eventTasks -------------------------------------------
-export const eventTasks = [
+export const dailyEvents = [
     {
         id: 1,   
-        type: 'Abyssal Expedition',
-        name: 'Daily Missions (x3)'
+        category: 'abyssal',
+        title: 'Daily Missions (x3)',
+        done: false 
     }, {
         id: 2, 
-        type: 'Abyssal Expedition',
-        name: 'Boss Lair (x3)'
+        category: 'abyssal',
+        title: 'Boss Lair (x3)',
+        done: false
     }, {
         id: 3, 
-        type: 'Abyssal Expedition',
-        name: 'AFK: Event Mobbing Maps'
+        category: 'abyssal',
+        title: 'AFK: Event Mobbing Maps',
+        done: false
     }, {
         id: 4, 
-        type: 'Abyssal Expedition',
-        name: 'Claim Reputation & Rewards'
+        category: 'abyssal',
+        title: 'Claim Reputation & Rewards',
+        done: false
     }, {
         id: 5, 
-        type: 'Identisk',
-        name: '[Tisk] Toong\'s Prayer'
+        category: 'identisk',
+        title: '[Tisk] Toong\'s Prayer (x30/day)',
+        done: false
     }, {
         id: 6, 
-        type: 'Identisk Weekly',
-        name: '[Tisk] Tropical Adventure'
+        category: '0to100',
+        title: 'Zero to One Hundred (x7/event',
+        done: false
+    }
+]
+export const weeklyEvents = [
+    {
+        id: 1, 
+        category: 'identisk',
+        title: '[Tisk] Coconut Smash (x3/week)',
+        done: false
     }, {
-        id: 7, 
-        type: 'Identisk Weekly',
-        name: '[Tisk] Coconut Smash'
-    }, {
-        id: 8, 
-        type: 'Identisk Weekly',
-        name: '[Tisk] Food Storehouse'
-    }, {
-        id: 9, 
-        type: '0to100',
-        name: 'Zero to One Hundred'
-    }, {
-        id: 10, 
-        type: 'Legendary Blue Dragon',
-        name: 'Collect and Summon Dragon Eggs'
-    },
+        id: 2, 
+        category: 'identisk',
+        title: '[Tisk] Food Storehouse (x3/week)',
+        done: false
+    }
 ];
+export const pastEvents = [
+    {
+        id: 1, 
+        category: 'Legendary Blue Dragon',
+        title: 'Collect and Summon Dragon Eggs',
+        done: false
+    }
+]
 //-------------- sharedTasks -------------------------------------------
-export const sharedTasks = [
+export const dailyShared = [
     {
         id: 1,
-        type: 'daily',
-        name: 'Daily Gift'
+        category: 'task',
+        title: 'Daily Gift',
+        done: false
     },  {
         id: 2,
-        type: 'daily',
-        name: 'Legion'
+        category: 'task',
+        title: 'Legion Coins',
+        done: false
     }, {
         id: 3,
-        type: 'daily',
-        name: 'House Check-in'
+        category: 'task',
+        title: 'House Check-in',
+        done: false
     }, {
         id: 4,
-        type: 'weekly',
-        name: 'Level Up Zero'
+        category: 'task',
+        title: 'Level Up Zero',
+        done: false
+    }
+];
+export const weeklyShared = [
+    {
+        id: 1,
+        category: 'task',
+        title: 'weekly task',
+        done: false
     }
 ];
