@@ -6,7 +6,7 @@ import NavDayWeek from './NavDayWeek';
 import ListTasks from './ListTasks';
 import { dailyShared, weeklyShared } from '../testData';
 
-export default function SharedCard() {
+export default function Shared() {
 
     const [key, setKey] = useState('daily');
 
@@ -54,7 +54,7 @@ export default function SharedCard() {
                             <Card.Header>Shared:</Card.Header>
                             <Card.Body>
                                 <Card.Text>
-                                    <ListTasks tasks={dailies} onCheck={handleCheckDaily} />
+                                    
                                 </Card.Text>
                             </Card.Body>
                         </Tab.Pane>
@@ -62,7 +62,7 @@ export default function SharedCard() {
                             <Card.Header>Shared:</Card.Header>
                             <Card.Body>
                                 <Card.Text>
-                                    <ListTasks tasks={weeklies} onCheck={handleCheckWeekly} />
+                                    
                                 </Card.Text>
                             </Card.Body>
                         </Tab.Pane>

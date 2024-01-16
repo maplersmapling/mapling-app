@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Task({ task, onCheck }) {
+export default function Item({ item, updateCheck }) {
 
     const handleChange = e => {
-        onCheck(task.id, e.targetChecked);
+        updateCheck(item.id, e.targetChecked);
     }
 
     return (
@@ -11,10 +11,10 @@ export default function Task({ task, onCheck }) {
             <label>
                 <input 
                     type="checkbox"
-                    checked={task.done}
+                    checked={item.done}
                     onChange={handleChange}
                 />
-                {task.title}
+                {item.title}
             </label>
         </div>
     );

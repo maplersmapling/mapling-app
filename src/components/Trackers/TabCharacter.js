@@ -1,10 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import DailyCard from './Cards/DailyCard';
-import WeeklyCard from './Cards/WeeklyCard';
-import EventCard from './Cards/EventCard';
-import SharedCard from './Cards/SharedCard';
+import Daily from './Cards/CardDaily';
 
 export default function TabCharacter() {
     return (
@@ -13,22 +10,20 @@ export default function TabCharacter() {
                 <Row>
                     <Col>
                     {/* Daily Card */}
-                    <DailyCard />
+                    <Daily />
                     </Col>
                     <Col>
                     {/* Weekly Card */}
-                    <WeeklyCard />
                     </Col>
                     <Col>
                     {/* Event Card */}
-                    <EventCard />
                     </Col>
                 </Row>
                 <Row>
                     <Col />
+                    <Col />
                     <Col>
                     {/* Shared Card */} 
-                    <SharedCard />
                     </Col>
                 </Row>
             </div>
