@@ -1,7 +1,8 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 
-export default function NavTaskBoss() {
+// tabs: tasks, done
+export default function NavEventShared() {
 
     return (
         <Nav
@@ -11,11 +12,6 @@ export default function NavTaskBoss() {
             <Nav.Item>
                 <Nav.Link eventKey="tasks">
                     Tasks
-                </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="bosses">
-                    Bosses
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item>

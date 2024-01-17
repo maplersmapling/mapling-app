@@ -6,7 +6,7 @@ import NavDayWeek from './NavDayWeek';
 import ListTasks from './ListTasks';
 import { dailyEvents, weeklyEvents } from '../testData';
 
-export default function EventCard() {
+export default function Event() {
 
     const [key, setKey] = useState('daily');
 
@@ -59,11 +59,11 @@ export default function EventCard() {
                             <Card.Body>
                                 <Card.Subtitle>Abyssal Expedition:</Card.Subtitle>
                                 <Card.Text>
-                                    <ListTasks tasks={abyssDaily} onCheck={handleCheckDaily} />
+                                    
                                 </Card.Text>
                                 <Card.Subtitle>Identisk:</Card.Subtitle>
                                 <Card.Text>
-                                    <ListTasks tasks={idenDaily} onCheck={handleCheckDaily} />
+                                    
                                 </Card.Text>
                             </Card.Body>
                         </Tab.Pane>
@@ -72,7 +72,7 @@ export default function EventCard() {
                             <Card.Body>
                                 <Card.Subtitle>Identisk:</Card.Subtitle>
                                 <Card.Text>
-                                    <ListTasks tasks={idenWeekly} onCheck={handleCheckWeekly} />
+                                    
                                 </Card.Text>
                             </Card.Body>
                         </Tab.Pane>

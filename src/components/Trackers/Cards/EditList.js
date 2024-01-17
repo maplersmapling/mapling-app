@@ -1,44 +1,46 @@
 import React from 'react';
-import { useState } from 'react';
+import EditItem from './EditItem';
+import AddItem from './AddItem';
 
-export default function EditList({ tasks, updateHandler }) {
+export default function EditList({ items, setItems }) {
 
-    const initialState = {
-        id: '', 
-        category: '',
-        title: '',
-        done: ''
+    function deleteHandler(itemId) {
+        const newItems = items.filter(item => {
+            return item.id !== itemId
+        })
+        setItems(newItems);
     }
-    const [updatedTask, setUpdatedTask] = useState(initialState);
 
-    const updatedTaskState = e => {
-        setUpdatedTask({
-            id: tasks.id,
-            category: tasks.category,
-            title: e.target.value,
-            done: false
-        });
+    function changeItemHandler(newItem) {
+        setItems(items.map(item => {
+            if (item.id === newItem.id) {
+                return newItem;
+            } else {
+                return item;
+            }
+        }));
     }
-    
-    const updateList = (input, e) => {
-        e.preventDefault();
-        updateHandler(input);
+
+    function additionHandler(item) {
+        setItems([...items, item]);
     }
-    
+
+
     return (
-            <ul>
-            <form onSubmit={e => updateList(updatedTask, e)}>
-                {tasks.map(task => {
-                    return (
-                        <li key={task.id}>
-                            <input 
-                                value={task.title}
-                                onChange={updatedTaskState}
-                            />
-                        </li>
-                    )
-                })}
-            </form>
-            </ul>
+        <div>
+        {items.map(item => {
+            return (
+                <EditItem 
+                    key={item.id}
+                    item={item}
+                    onDeleteItem={deleteHandler}
+                    onChangeItem={changeItemHandler}
+                />
+            )
+        })}
+            <AddItem 
+                onAdd={additionHandler}
+            />
+        </div>
     );
-}
+} 

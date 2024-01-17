@@ -9,11 +9,15 @@ Includes data for: charTabNames, dailyTasks, dailyBosses, weeklyTasks,
 /*-----------------
 values setup: 
  {
-   id: '',
-   category: '',
-   title: '', 
-   done: ''
-},
+    category: '',
+    items: [
+        {
+            id: '',
+            title: '',
+            done: ''
+        }
+    ]
+ },
 -----------------*/
 //-------------- charTabNames -------------------------------------------
 export const charNames = [
@@ -41,8 +45,86 @@ export const charNames = [
     }
 ]
 //-------------- dailyTasks -------------------------------------------
-
+export const dailyTaskTitle = [
+    {
+        id: 1,
+        title: 'Tasks'
+    }
+];
 export const dailyTasks = [
+    {
+        id: 1, 
+        title: 'Guild Check-in',
+        done: false
+    }, {
+        id: 2, 
+        title: 'MPE',
+        done: false
+    }
+ ];
+export const dailyArcanes = [
+    {
+        id: 1, 
+        title: 'Vanishing Journey',
+        done: false
+    }, {
+        id: 2, 
+        title: 'Chu Chu',
+        done: false
+    }, {
+        id: 3, 
+        title: 'Lachelein',
+        done: false
+    }, {
+        id: 4,  
+        title: 'Arcana',
+        done: false
+    }, {
+        id: 5, 
+        title: 'Morass',
+        done: false
+    }, {
+        id: 6, 
+        title: 'Esfera',
+        done: false
+    }, {
+        id: 7, 
+        title: 'Tenebris Research',
+        done: false
+    }
+];
+export const dailyGrandis = [
+    {
+        id: 1, 
+        title: 'Erda\'s Request',
+        done: false
+    }, {
+        id: 2, 
+        title: 'Cernium',
+        done: false
+    }, {
+        id: 3, 
+        title: 'Arcus',
+        done: false
+    }, {
+        id: 4, 
+        title: 'Odium',
+        done: false
+    }, {
+        id: 5, 
+        title: 'Shangri-La',
+        done: false
+    }, {
+        id: 6, 
+        title: 'Arteria',
+        done: false
+    }, {
+        id: 7,
+        title: 'Carcion',
+        done: false
+    }
+];
+export const dailyTasks2 = [
     {  
         id: 1, 
         category: 'task',
@@ -129,77 +211,62 @@ export const dailyTasks = [
 export const dailyBosses = [
     {
         id: 1,  
-        category: ['easy', 'normal'],
         title: 'Zakum',
         done: false
     }, { 
         id: 2,  
-        category: ['easy', 'normal'],
         title: 'Magnus',
         done: false
     }, {
         id: 3,  
-        category: ['normal'],
         title: 'Hilla',
         done: false
     }, {
         id: 4,  
-        category: ['normal'],
         title: 'OMNI-CLN',
         done: false
     }, {
         id: 5,  
-        category: ['easy', 'normal'],
         title: 'Papulatus',
         done: false
     }, {
         id: 6,  
-        category: ['normal'],
         title: 'Crimson Queen',
         done: false
     }, {
         id: 7,  
-        category: ['normal'],
         title: 'Pierre',
         done: false
     }, {
         id: 8,  
-        category: ['normal'],
         title: 'Von Bon',
         done: false
     }, {
         id: 9,  
-        category: ['normal'],
         title: 'Vellum',
         done: false
     }, {
         id: 10,  
-        category: ['easy', 'normal', 'hard'],
         title: 'Von Leon',
         done: false
     }, {
         id: 11,  
-        category: ['easy', 'normal', 'chaos'],
         title: 'Horntail',
         done: false
     }, {
         id: 12,  
-        category: ['normal'],
         title: 'Arkarium',
         done: false
     }, {
         id: 13,  
-        category: ['normal'],
         title: 'Pink Bean',
         done: false
     }, {
         id: 14,  
-        category: ['normal'],
         title: 'Gollux',
         done: false
     }, {
         id: 15,  
-        category: ['normal', 'hard'],
         title: 'Ranmaru',
         done: false
     }

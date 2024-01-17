@@ -6,7 +6,7 @@ import NavCard from './NavTaskBoss';
 import ListTasks from './ListTasks';
 import { weeklyTasks, weeklyBosses} from '../testData';
 
-export default function WeeklyCard() {
+export default function Weekly() {
 
     const [key, setKey] = useState('tasks');
 
@@ -57,15 +57,15 @@ export default function WeeklyCard() {
                             <Card.Body>
                                 <Card.Subtitle>Tasks:</Card.Subtitle>
                                 <Card.Text>
-                                    <ListTasks tasks={taskList} onCheck={handleCheckTask} />
+                                    
                                 </Card.Text>
                                 <Card.Subtitle>Guild:</Card.Subtitle>
                                 <Card.Text>
-                                    <ListTasks tasks={guildList} onCheck={handleCheckTask} />
+                                    
                                 </Card.Text>
                                 <Card.Subtitle>Arcane River:</Card.Subtitle>
                                 <Card.Text>
-                                    <ListTasks tasks={arcaneList} onCheck={handleCheckTask} />
+                                    
                                 </Card.Text>
                             </Card.Body>
                         </Tab.Pane>

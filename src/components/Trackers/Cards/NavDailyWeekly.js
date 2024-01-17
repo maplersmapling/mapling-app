@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 
-export default function NavDayWeek() {
+export default function NavDailyWeekly() {
 
     return (
         <Nav
@@ -9,13 +9,13 @@ export default function NavDayWeek() {
             variant="tabs"
         >
             <Nav.Item>
-                <Nav.Link eventKey="daily">
-                    Daily
+                <Nav.Link eventKey="tasks">
+                    Tasks
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="weekly">
-                    Weekly
+                <Nav.Link eventKey="bosses">
+                    Bosses
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item>
