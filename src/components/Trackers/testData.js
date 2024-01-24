@@ -3,54 +3,70 @@ File: testData.js
 -------------------------------------------------------------------------------
 Description: contains initial data for the tracker component 
 --------------
-Includes data for: charTabNames, dailyTasks, dailyBosses, weeklyTasks, 
-                   weeklyBosses, eventTasks, sharedTasks
+Includes data for: charNames, dailyTaskTitles, dailyTasks, dailyArcanes, 
+                   dailyGrandis, dailyBossTitles, dailyBosses, 
+                   weeklyTaskTitles, weeklyTasks, weeklyGuild, weeklyArcanes, 
+                   weeklyBossTitles, weeklyBosses, eventTaskTitles, eventTasks, 
+                   sharedTaskTitles, sharedTasks
 =============================================================================*/
 /*-----------------
 values setup: 
- {
-    category: '',
-    items: [
-        {
-            id: '',
-            title: '',
-            done: ''
-        }
-    ]
- },
+{
+    id: '',
+    title: '',
+    done: ''
+},
+
+or..
+{
+    id: '',
+    title: '',
+    isActive: ''
+}
 -----------------*/
-//-------------- charTabNames -------------------------------------------
+//========================================================
+//-------------------------------------- Character Names -------------------------------------------
+//========================================================
 export const charNames = [
     {
         id: 1,
-        category: 'character',
         title: 'character 1',
         isActive: true
 
     }, {
         id: 2,
-        category: 'character',
         title: 'character 2',
         isActive: false
     }, {
         id: 3,
-        category: 'character',
         title: 'character 3',
         isActive: false
     }, {
         id: 4,
-        category: 'character',
         title: 'character 4',
         isActive: false
     }
 ]
-//-------------- dailyTasks -------------------------------------------
-export const dailyTaskTitle = [
+//========================================================
+//----------------------------------------- CardDaily -------------------------------------------
+//========================================================
+// daily task titles
+export const dailyTaskTitles = [
     {
         id: 1,
-        title: 'Tasks'
+        title: 'Tasks',
+        isActive: true
+    }, {
+        id: 2,
+        title: 'Arcane River',
+        isActive: true
+    }, {
+        id: 3,
+        title: 'Grandis',
+        isActive: true
     }
 ];
+// daily tasks
 export const dailyTasks = [
     {
         id: 1, 
@@ -62,6 +78,7 @@ export const dailyTasks = [
         done: false
     }
  ];
+ // daily arcanes
 export const dailyArcanes = [
     {
         id: 1, 
@@ -93,6 +110,7 @@ export const dailyArcanes = [
         done: false
     }
 ];
+// daily grandis
 export const dailyGrandis = [
     {
         id: 1, 
@@ -124,90 +142,15 @@ export const dailyGrandis = [
         done: false
     }
 ];
-export const dailyTasks2 = [
-    {  
-        id: 1, 
-        category: 'task',
-        title: 'Guild Check-in',
-        done: false
-    }, {
-        id: 2, 
-        category: 'task',
-        title: 'MPE',
-        done: false
-    },{
-        id: 3, 
-        category: 'arcane',
-        title: 'Vanishing Journey',
-        done: false
-    }, {
-        id: 4, 
-        category: 'arcane',
-        title: 'Chu Chu',
-        done: false
-    }, {
-        id: 5, 
-        category: 'arcane',
-        title: 'Lachelein',
-        done: false
-    }, {
-        id: 6,  
-        category: 'arcane',
-        title: 'Arcana',
-        done: false
-    }, {
-        id: 7, 
-        category: 'arcane',
-        title: 'Morass',
-        done: false
-    }, {
-        id: 8, 
-        category: 'arcane',
-        title: 'Esfera',
-        done: false
-    }, {
-        id: 9, 
-        category: 'arcane',
-        title: 'Tenebris Research',
-        done: false
-    }, {
-        id: 10, 
-        category: 'grandis',
-        title: 'Erda\'s Request',
-        done: false
-    }, {
-        id: 11, 
-        category: 'grandis',
-        title: 'Cernium',
-        done: false
-    }, {
-        id: 12, 
-        category: 'grandis',
-        title: 'Arcus',
-        done: false
-    }, {
-        id: 13, 
-        category: 'grandis',
-        title: 'Odium',
-        done: false
-    }, {
-        id: 14, 
-        category: 'grandis',
-        title: 'Shangri-La',
-        done: false
-    }, {
-        id: 15, 
-        category: 'grandis',
-        title: 'Arteria',
-        done: false
-    }, {
-        id: 16,
-        category: 'grandis',
-        title: 'Carcion',
-        done: false
+// daily bosses titles
+export const dailyBossTitles = [
+    {
+        id: 1,
+        title: 'Bosses',
+        isActive: true
     }
-];
-//-------------- dailyBosses -------------------------------------------
+]
+// daily bosses
 export const dailyBosses = [
     {
         id: 1,  
@@ -271,268 +214,322 @@ export const dailyBosses = [
         done: false
     }
 ];
-//-------------- weeklyTasks -------------------------------------------
+//========================================================
+//----------------------------------------- CardWeekly -------------------------------------------
+//========================================================
+// weekly task titles
+export const weeklyTaskTitles = [
+    {
+        id: 1,
+        title: 'Tasks',
+        isActive: true
+    }, {
+        id: 2,
+        title: 'Guild',
+        isActive: true
+    }, {
+        id: 3,
+        title: 'Arcane River',
+        isActive: true
+    }
+];
+// weekly tasks
 export const weeklyTasks = [
     {
         id: 1, 
-        category: 'guild',
+        title: 'Dark World Tree',
+        done: false
+    }, {
+        id: 2, 
+        title: 'Scrapyard',
+        done: false
+    }, {
+        id: 3, 
+        title: 'Mu Lung Dojo',
+        done: false
+    }
+];
+// weekly guild
+export const weeklyGuild = [
+    {
+        id: 1, 
         title: 'Claim Guild Buff',
         done: false
     }, {
         id: 2, 
-        category: 'task',
-        title: 'Dark World Tree',
-        done: false
-    }, {
-        id: 3, 
-        category: 'task',
-        title: 'Mu Lung Dojo',
-        done: false
-    }, {
-        id: 4, 
-        category: 'guild',
         title: 'Flag Race',
         done: false
     }, {
-        id: 5, 
-        category: 'guild',
+        id: 3, 
         title: 'Sharenian Culvert',
         done: false
-    }, {
-        id: 6,
-        category: 'arcane', 
+    }
+];
+// weekly arcanes
+export const weeklyArcanes = [
+    {
+        id: 1,
         title: 'Erda Spectrum',
         done: false
     }, {
-        id: 7, 
-        category: 'arcane',
+        id: 2, 
         title: 'Hungry Muto',
         done: false
     }, {
-        id: 8, 
-        category: 'arcane',
+        id: 3, 
         title: 'Midnight Chaser',
         done: false
     }, {
-        id: 9, 
-        category: 'arcane',
+        id: 4, 
         title: 'Spirit Savior',
         done: false
     }, {
-        id: 10, 
-        category: 'arcane',
+        id: 5, 
         title: 'Ranheim Defense',
         done: false
     }, {
-        id: 11, 
-        category: 'arcane',
+        id: 6, 
         title: 'Esfera Guardian',
         done: false
     }
 ];
-//-------------- weeklyBosses -------------------------------------------
+// weekly boss titles
+export const weeklyBossTitles = [
+    {
+        id: 1,
+        title: 'Bosses',
+        done: false
+    }
+];
+// weekly bosses
 export const weeklyBosses = [
     {
         id: 1, 
-        category: ['chaos'],
-        title: 'Zakum',
+        title: 'Chaos Zakum',
         done: false
     }, {
         id: 2, 
-        category: ['hard'],
-        title: 'Magnus',
+        title: 'Hard Magnus',
         done: false
     }, {
         id: 3, 
-        category: ['hard'],
-        title: 'Hilla',
+        title: 'Hard Hilla',
         done: false
     }, {
         id: 4, 
-        category: ['chaos'],
-        title: 'Papulatus',
+        title: 'Chaos Papulatus',
         done: false
     }, {
         id: 5, 
-        category: ['chaos'],
-        title: 'Crimson Queen',
+        title: 'Chaos Crimson Queen',
         done: false
     }, {
         id: 6, 
-        category: ['chaos'],
-        title: 'Pierre',
+        title: 'Chaos Pierre',
         done: false
     }, {
         id: 7, 
-        category:['chaos'],
-        title: 'Von Bon',
+        title: 'Chaos Von Bon',
         done: false
     }, {
         id: 8, 
-        category: ['chaos'],
-        title: 'Vellum',
+        title: 'Chaos Vellum',
         done: false
     }, {
         id: 9, 
-        category: ['chaos'],
-        title: 'Pink Bean',
+        title: 'Chaos Pink Bean',
         done: false
     }, {
         id: 10, 
-        category: ['easy', 'normal'],
         title: 'Cygnus',
         done: false
     }, {
         id: 11, 
-        category: ['normal', 'hard'],
         title: 'Lotus',
         done: false
     }, {
         id: 12, 
-        category: ['normal', 'hard'],
         title: 'Damien',
         done: false
     }, {
         id: 13, 
-        category: ['normal', 'chaos'],
         title: 'Guardian Angel Slime',
         done: false
     }, {
         id: 14, 
-        category: ['easy', 'normal', 'hard'],
         title: 'Lucid',
         done: false
     }, {
         id: 15, 
-        category: ['easy', 'normal', 'hard'],
         title: 'Will',
         done: false
     }, {
         id: 16, 
-        category: ['normal', 'chaos'],
         title: 'Gloom',
         done: false
     }, {
         id: 17, 
-        category: ['normal', 'hard'],
         title: 'Versus Hilla',
         done: false
     }, {
         id: 18, 
-        category: ['normal', 'hard'],
         title: 'Darknell',
         done: false
     }, {
         id: 19, 
-        category: ['hard', 'extreme'],
         title: 'Black Mage',
         done: false
     }, {
         id: 20, 
-        category: ['normal', 'hard', 'extreme'],
         title: 'Chosen Seren',
         done: false
     }, {
         id: 21, 
-        category: ['easy', 'normal', 'chaos', 'extreme'],
         title: 'Kalos the Guardian',
         done: false
     }, {
         id: 22, 
-        category: ['easy', 'normal', 'hard', 'extreme'],
         title: 'Kaling',
         done: false
     }, {
         id: 23, 
-        category: 'normal',
         title: 'Princess No',
         done: false
     }, {
         id: 24, 
-        category: 'normal',
         title: 'Akechi Mitsuhide',
         done: false
     }
 ];
-//-------------- eventTasks -------------------------------------------
-export const dailyEvents = [
+//========================================================
+//------------------------------------------- CardEvent -------------------------------------------
+//========================================================
+// event titles
+export const eventTitles = [
+    {
+        id: 1,
+        title: 'Abyssal Expedition',
+        isActive: true
+    }, {
+        id: 2,
+        title: 'Identisk',
+        isActive: true
+    }, {
+        id: 3,
+        title: 'Zero to One Hundred',
+        isActive: true
+    }
+];
+// abyssal expeditions
+export const abyssalExpeditions = [
     {
         id: 1,   
-        category: 'abyssal',
         title: 'Daily Missions (x3)',
         done: false 
     }, {
         id: 2, 
-        category: 'abyssal',
         title: 'Boss Lair (x3)',
         done: false
     }, {
         id: 3, 
-        category: 'abyssal',
         title: 'AFK: Event Mobbing Maps',
         done: false
     }, {
         id: 4, 
-        category: 'abyssal',
         title: 'Claim Reputation & Rewards',
         done: false
-    }, {
-        id: 5, 
-        category: 'identisk',
-        title: '[Tisk] Toong\'s Prayer (x30/day)',
+    }
+];
+// daily identisks
+export const dailyIdentisks = [
+    {
+        id: 1, 
+        title: '[Identisk] Dance of the Sun and Wind (x30/day)',
         done: false
     }, {
-        id: 6, 
-        category: '0to100',
-        title: 'Zero to One Hundred (x7/event',
+        id: 2,
+        title: 'Identisk Festival',
         done: false
     }
-]
-export const weeklyEvents = [
+];
+// weekly identisks
+export const weeklyIdentisks = [
     {
         id: 1, 
         category: 'identisk',
-        title: '[Tisk] Coconut Smash (x3/week)',
+        title: '[Identisk] Coconut Smash (x3/week)',
         done: false
     }, {
         id: 2, 
         category: 'identisk',
-        title: '[Tisk] Food Storehouse (x3/week)',
+        title: '[Identisk] Food Storehouse (x3/week)',
+        done: false
+    }, {
+        id: 3,
+        title: '[Identisk] Hunting Adventure (x3/week)',
+        done: false
+    }
+]
+// identisk wind coins
+export const identiskWindCoins = [
+    {
+        id: 1, 
+        title: 'Claim Wind Coins',
         done: false
     }
 ];
-export const pastEvents = [
+export const zeroHundred = [
+    {
+        id: 1,
+        title: 'Use on seven characters',
+        done: false
+    }
+];
+
+export const legendaryBlueDragon = [
     {
         id: 1, 
         category: 'Legendary Blue Dragon',
         title: 'Collect and Summon Dragon Eggs',
         done: false
     }
+];
+//========================================================
+//------------------------------------------ CardShared -------------------------------------------
+//========================================================
+// shared tasks titles
+export const sharedTitles = [
+    {
+        id: 1, 
+        title: 'Daily',
+        isActive: true
+    }, {
+        id: 2,
+        title: 'Weekly',
+        isActive: true
+    }, {
+        id: 3,
+        title: 'Other',
+        isActive: true
+    }
 ]
-//-------------- sharedTasks -------------------------------------------
+// daily shared tasks
 export const dailyShared = [
     {
         id: 1,
-        category: 'task',
         title: 'Daily Gift',
         done: false
     },  {
         id: 2,
-        category: 'task',
         title: 'Legion Coins',
         done: false
     }, {
         id: 3,
-        category: 'task',
         title: 'House Check-in',
-        done: false
-    }, {
-        id: 4,
-        category: 'task',
-        title: 'Level Up Zero',
         done: false
     }
 ];
+// weekly shared Tasks
 export const weeklyShared = [
     {
         id: 1,
@@ -541,3 +538,11 @@ export const weeklyShared = [
         done: false
     }
 ];
+// no limit shared tasks
+export const otherShared = [
+    {
+        id: 1,
+        title: 'Level Up Zero',
+        done: false
+    }
+]
