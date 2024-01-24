@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Item({ item, updateCheck }) {
+export default function Item({ item, onCheck }) {
 
     const handleChange = e => {
-        updateCheck(item.id, e.targetChecked);
+        onCheck(item.id, e.targetChecked);
     }
 
     return (

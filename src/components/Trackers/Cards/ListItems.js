@@ -1,9 +1,9 @@
 import React from 'react';
 import Item from './Item';
 
-export default function ListItems({ items, setItems, handleChecked }) {
+export default function ListItems({ items, setItems, handleCheck }) {
     
-    function updateItemCheck(itemId, nextDone) {
+    function updateCheck(itemId, nextDone) {
         setItems(items.map(item => {
             if (item.id === itemId) {
                 return {
@@ -15,10 +15,14 @@ export default function ListItems({ items, setItems, handleChecked }) {
             }
         }));
         
-        const doneItems = items.filter(item => {
-            return item.done === nextDone
+        const doneItem = items.map(item => {
+            if (item.id === itemId) {
+                return item;
+            } else {
+                return null;
+            }
         })
-        handleChecked(doneItems);
+        handleCheck(doneItem);
     }
 
     return (
@@ -27,7 +31,7 @@ export default function ListItems({ items, setItems, handleChecked }) {
                     return <Item
                                 key={item.id} 
                                 item={item}
-                                updateCheck={updateItemCheck}
+                                onCheck={updateCheck}
                             />
                 })}
             </>

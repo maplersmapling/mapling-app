@@ -33,8 +33,8 @@ export default function EditList({ items, setItems }) {
                 <EditItem 
                     key={item.id}
                     item={item}
-                    onDeleteItem={deleteHandler}
-                    onChangeItem={changeItemHandler}
+                    onDelete={deleteHandler}
+                    onChange={changeItemHandler}
                 />
             )
         })}

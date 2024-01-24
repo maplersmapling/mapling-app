@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-export default function EditItem({item, onDeleteItem, onChangeItem }) {
+export default function EditItem({item, onDelete, onChange }) {
 
     const [isClicked, setIsClicked] = useState(false);
 
@@ -12,7 +12,7 @@ export default function EditItem({item, onDeleteItem, onChangeItem }) {
                 <input 
                     value={item.title}
                     onChange={e => {
-                        onChangeItem({
+                        onChange({
                             ...item,
                             title: e.target.value
                         });
@@ -36,7 +36,7 @@ export default function EditItem({item, onDeleteItem, onChangeItem }) {
     return (
         <div>
             {itemContent}
-            <button onClick={() => onDeleteItem(item.id)}>
+            <button onClick={() => onDelete(item.id)}>
                 X
             </button>
         </div>

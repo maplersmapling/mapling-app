@@ -1,14 +1,16 @@
 import React from 'react';
 
-export default function ListChecked({ checked }) {
+export default function ListChecked({ completed }) {
 
     return (
         <ul>
-            {checked.map(check => {
-                <li key={check.id}>
-                    {check.title}
-                </li>
+            {completed.map(complete => {
+                return (
+                    <li key={complete.id}>
+                        {complete.title}
+                    </li>
+                );
             })}
         </ul>
-    )
+    );
 }
