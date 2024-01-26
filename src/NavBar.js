@@ -10,6 +10,8 @@ import React from 'react';
 import { Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
+import MapleClock from './MapleClock';
+
 import styles from './NavBar.module.css';
 import logo from './maplinglogo.png';
 
@@ -26,6 +28,9 @@ export default function NavBar() {
                 <Nav className="justify-content-end" 
                      style={{ width: "100%"}}
                 >
+                    <Nav.Item>
+                        <MapleClock />
+                    </Nav.Item>
                     <Nav.Link as={NavLink} 
                               to="/register" 
                               className={styles.navLink}
